@@ -61,6 +61,8 @@ img {
 .hero-inner {
   display: grid;
   align-items: center;
+  grid-template-columns: 1fr;
+  gap: 0.9rem;
 }
 
 .hero-text {
@@ -356,23 +358,22 @@ img {
   min-width: 180px;
 }
 
-/* When contact info is placed in the hero, force a single left-to-right row */
-.hero-text .contact-content {
+/* Contact row under hero should span full width */
+.hero-contact {
   width: 100%;
 }
 
-.hero-text .contact-list {
+.hero-contact .contact-list {
   display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: max-content;
+  grid-template-columns: max-content max-content minmax(0, 1fr);
   align-items: start;
   gap: 1rem 1.6rem;
   width: 100%;
-  overflow-x: auto;
 }
 
-.hero-text .contact-list li {
-  min-width: 0;
+.hero-contact .contact-value a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .contact-label {
