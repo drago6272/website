@@ -1,0 +1,113 @@
+﻿When the next year rolled around, I decided that I wanted to try and test my limits with the next booth game. This year, our club had chosen Sharknado as our booth’s theme, and to match this blockbuster franchise, I wanted to make something really cinematic and engaging. Thus, I just went into it with the idea of adding every feature that popped into my head for this game, no matter the complexity. As you will see, this turned out to be a bit more than I could handle. 
+
+
+The main idea for the game was to make it a multiplayer game controlled with wii remotes, where the players fight off sharks flying towards them. One player would have a lightgun to point at the screen and shoot with, while the other would have a “chainsaw” that they could swing around. The idea was that, by using these intuitive controls, it would avoid a learning curve, as well as increase throughput through the booth since two people could play at once. I also came up with the genius idea of making the game’s setting be in CMU, totally only due to my love for the school (and not as a tactic to pander to the judges, wink). 
+
+
+/home/teddy/Documents/website/images/Shark Game/81097.jpg
+Caption: Initial diagram of what I was aiming for
+
+
+The main question was, how was I going to get the CMU campus into my game? Early on, I naively tried to model the campus in 3d. While it may have been a good idea for someone with blender experience, I had next to no experience with non-parametric 3d modeling. I did try getting the model from google maps, however it ended up being too low quality to use, especially including the textures. 
+
+
+Then I got the genius idea: if this is a game about a movie with cheap special effects, why not just make the background actual footage from CMU? As long as the footage was motion tracked accurately, I could hypothetically put anything I want in it! And thus, during spring break, I went out and filmed a first person view going from the fence to Hamerschlag Hall. 
+
+
+/home/teddy/Documents/website/images/Shark Game/IT_WORKS (1).MP4
+Caption: Initial test of motion tracking
+
+
+Overall, the video processing/editing took around a month, with the majority spent on motion tracking the camera’s movements. I naively recorded the video at 1080p+30fps since that was the most the projector could display, but as it turns out I desperately needed this extra information in order to improve the feature tracking, especially when the camera turns quickly and the image becomes blurred. I tried several different applications and blender extensions in order to mitigate this, but ended up doing every single tracking point manually.
+
+
+/home/teddy/Documents/website/images/Shark Game/Tracking_Video_Final.mp4
+Caption: Timelapse of one of the motion-tracking work sessions, about ~6 hours in total. By this point I was starting to see those goddang tracking points when I closed my eyes. 
+
+
+/home/teddy/Documents/website/images/Shark Game/2025-03-10 02-10-20.mp4
+Caption: The result of my hard work. It’s not perfect, so I had to make sure that between the big turns, there wasn’t anything in frame that would give it away
+
+
+Now that motion tracking was done, I had to actually convey to the player that there are sharknados everywhere! But it would be too chaotic to put the tornados right next to the camera’s view, so I chose to put the tornados behind CMU’s buildings. Unfortunately, this meant that I had to mask out the buildings from the sky above, which normally would be a simple task of chroma-keying the sky’s color out of the image. However, due to the rain earlier that day, all of the roofs reflected the sky above, which literally is exactly the border that needed to be masked. Thus, I spent another two weeks manually rotoscoping all of the building’s roofs. At this point it was easy to forget that I was indeed making a video game and not a full-blown movie. 
+
+
+/home/teddy/Documents/website/images/Shark Game/Masking_Demo.mp4
+Caption: A demo of what masking the scene looks like. Unfortunately, feature tracking grey on grey is very difficult for blender to do, so almost all of this was manual. 
+
+
+Despite the hurdles, the rest of the video editing went smoothly. I was able to quickly animate tornados of various widths, and use blender physics to procedurally animate the sharks in orbit. After some careful placement, the video was complete!
+
+
+/home/teddy/Documents/website/images/Shark Game/Untitled video (1).mp4
+Caption: A test render of the tornado+sharks
+
+
+/home/teddy/Documents/website/images/Shark Game/0001-6100.mov
+Caption: The video with sharkados added
+
+
+Now it was time to add sharks! With my limited skills, I was able to create some simple biting/swimming animations from rigged shark models I found online. 
+
+
+/home/teddy/Documents/website/images/Shark Game/Shark_Basic_Animation.mp4
+Caption: First shark animation test
+
+
+/home/teddy/Documents/website/images/Shark Game/2025-03-25 19-04-02.mp4
+Caption: The animated sharks, now moving with the background! 
+
+
+/home/teddy/Documents/website/images/Shark Game/sharkpog.png
+Caption: This isn’t relevant to the development process. I just find it funny
+
+
+Now, all that was left was the game. By this point, I only had a few days left to implement the actual gameplay, so I frantically spent every second I could assembling everything and making a game out of it. Luckily, I’d seen that someone had already made an API for wiimote to Unity communication, so I was able to extract the motion controls for the chainsaw. I wanted it to be very clear that the sharks were being sliced apart, so I implemented some code to procedurally bisect the model along the direction the wiimote is swung, and it worked perfectly. As for the lightgun, I used a dolphinbar to convert the wiimote pointer into mouse movements, and then made separate shattered shark models that were swapped out at the point of firing so that the sharks appeared to explode into pieces. 
+
+
+/home/teddy/Documents/website/images/Shark Game/Shatter_demo.gif
+Caption: Demo of lightgun explosion effect
+
+
+To make the game a bit more arcade-like and immersive, during development I also made gun/chainsaw-shaped holsters for the wiimotes. The chainsaw was especially awkward, as it had a lot of uniquely shaped parts that had a high potential for breakage. 
+
+
+/home/teddy/Documents/website/images/Shark Game/IMG_5455.png
+Caption: Printing out the chainsaw
+
+
+/home/teddy/Documents/website/images/Shark Game/IMG_5469.png
+/home/teddy/Documents/website/images/Shark Game/IMG_5470.png
+/home/teddy/Documents/website/images/Shark Game/IMG_5478.png
+Caption: The chainsaw controller. While it’s not in the photo, I made a cartridge that holds the wiimote which slotted into the hole in the front. After about a day of people playing the game with it, the chainsaw shell ended up splitting perfectly in half. 
+
+
+When I was starting to wrap up, I realized that narratively, there isn’t really any reason for the protagonist of the game to be running to Hamerschlag hall. After all, wouldn’t it be easier to just hide in the nearest building? So, I decided that the reason must be that there is a sharknado-destroying weapon within the building. Coincidentally, CMU radio club also happened to have their space at the top of the building, and after a few emails, they agreed to let me film in their space. 
+
+
+/home/teddy/Documents/website/images/Shark Game/Untitled video (6).mp4
+Caption: The video of me messing with CMU radio club’s equipment. When asked what I wanted to film, I just said, “I was hoping to just press a ton of buttons,” which by some miracle they agreed to (after directing me which ones were ok). 
+
+
+/home/teddy/Documents/website/images/Shark Game/IMG_5488.MOV
+Caption: The view from the top of Hamerschlag is quite nice!
+
+
+I decided that it would be hilarious if the sharknado-ending weapon was some sort of satellite laser that ended up destroying the entire city, so I made a simple blender animation for that too: 
+
+
+/home/teddy/Documents/website/images/Shark Game/Satellite_Demo_Shark.mp4
+Caption: This, along with the previous video, plays when the game ends. I am hi-larious. 
+
+
+Finally, after installing it in the booth, it was complete! Here’s some content from carnival: 
+
+
+/home/teddy/Documents/website/images/Shark Game/IMG_5544.MOV
+/home/teddy/Documents/website/images/Shark Game/IMG_5542.png
+/home/teddy/Documents/website/images/Shark Game/IMG_5541.png
+/home/teddy/Documents/website/images/Shark Game/IMG_5540.png
+Caption: Photos of the booth, which I was not able to help with much. Everyone did a great job! \
+
+
+And finally, after all of the hard work, did we finally achieve glory? We got third place within our own booth category. Eh, good enough.

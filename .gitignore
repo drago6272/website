@@ -1,0 +1,68 @@
+# Large / binary media (keep the repo pushable)
+*.mp4
+*.MP4
+*.mov
+*.MOV
+*.webm
+*.WEBM
+*.m4v
+*.M4V
+*.avi
+*.AVI
+*.mpg
+*.MPG
+*.mpeg
+*.MPEG
+*.mkv
+*.MKV
+
+# Camera/phone formats
+*.heic
+*.HEIC
+*.heif
+*.HEIF
+*.dng
+*.DNG
+*.raw
+*.RAW
+*.cr2
+*.CR2
+*.nef
+*.NEF
+*.arw
+*.ARW
+
+# Audio (optional, often large)
+*.wav
+*.WAV
+*.aiff
+*.AIFF
+*.flac
+*.FLAC
+
+# Archives / installers
+*.zip
+*.ZIP
+*.7z
+*.rar
+*.RAR
+*.tar
+*.TAR
+*.gz
+*.GZ
+*.dmg
+*.DMG
+*.iso
+*.ISO
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+
+# Node / Python junk (if you ever add tooling)
+node_modules/
+dist/
+build/
+__pycache__/
+*.pyc
+

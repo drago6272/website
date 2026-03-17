@@ -1,0 +1,50 @@
+﻿/home/teddy/Documents/website/images/Dino Game/Screenshot_20260316_134915.png
+
+
+You can play the game in the browser here: https://one-kappa-tea.itch.io/totally-just-the-chrome-dino-game
+
+
+When it hit the second year of booth, I knew that I wanted to take it up a notch (or several) and make a full-on video game. However, I didn’t have any prior experience with game design, so everything had to be learned from scratch. Unfortunately, I don’t have many photos of the development process for this one, so I won’t go too deep into the details there. 
+
+
+Overall, the game is supposed to be a parody of the Chrome Dino game that pops up in the chrome browser when you try to search for something but you are not connected to the internet. However, since it was a parody, we decided that our own original “twist” would be that this would be the extinction event, and that all of the dinosaurs would be running away from a barrage of meteors. To drive this home, the original dino is killed in the beginning cutscene, and it is revealed that the actual player character is the school’s mascot “Scotty”. To make the game more intuitive/interactive, I made it so that the player would jump in the game by physically jumping in real life via a pressure pad and an Arduino. 
+
+
+/home/teddy/Documents/website/images/Dino Game/IMG_4622.png
+Caption: Jump pad+arduino. I bought two just in case, which ended up being a blessing as the first quickly broke due to the volume of people coming through the booth
+
+
+Luckily, this game did not end up being too technically challenging, as it is a simple side-scroller with a spawner for enemies/cacti on one side. Most of the time spent on the game actually went into all of the animations and effects, such as the starting/ending cutscene as well as all of the animated dinosaurs in the background. I found the development process to be a great balance of being challenging enough where I was pushing myself to learn new skills, while also being achievable enough so that I could feel a steady rate of progression throughout the entire project. 
+
+
+/home/teddy/Documents/website/images/Dino Game/Dino_Intro_Rough.mp4
+Caption: Rough draft of the game intro 
+
+
+/home/teddy/Documents/website/images/Dino Game/IMG_4688.JPG
+Caption: Testing the game with the ultra-short-throw projector
+
+
+/home/teddy/Documents/website/images/Dino Game/IMG_4708.png
+Caption: Setting up the game in the wee hours before carnival started. 
+
+
+To my surprise, people really loved it! We had a long line coming out of the booth for the whole first day of carnival (which might not have solely been due to the game, as the other builders did an amazing job of designing/decorating the booth). 
+
+
+/home/teddy/Documents/website/images/Dino Game/IMG_4728.MOV.mp4
+Caption: Some carnival-goers playing the game
+
+
+/home/teddy/Documents/website/images/Dino Game/IMG_4725.png
+/home/teddy/Documents/website/images/Dino Game/IMG_4706.png
+/home/teddy/Documents/website/images/Dino Game/IMG_4724.png
+/home/teddy/Documents/website/images/Dino Game/IMG_4713.png
+Caption: Some other images of the booth itself
+
+
+Unfortunately, despite all of our best efforts, we did not place in the booth awards that year. Mark my words, though, I will get our booth to place… 
+
+
+/home/teddy/Documents/website/images/Dino Game/IMG_4723.MOV
+Caption:: Live reaction of the awards ceremony (and us realizing we didn’t win anything)

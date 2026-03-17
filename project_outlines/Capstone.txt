@@ -1,0 +1,55 @@
+﻿In order to complete the ECE undergraduate degree, CMU students must demonstrate their knowledge through a capstone project. The goal is to create a new product or system that addresses a real-world need, while also showing sufficient technical complexity. For our capstone project, my teammates and I decided to create a machine that would sort recycling from trash going through a conveyor belt using computer vision and a 3-axis gantry. 
+
+
+Overall, my main role in the project was to create the robotic gantry system and program its movement to ensure it could pick up, move, and drop trash consistently (though I did help a little bit on the computer vision side as well). 
+
+
+Originally, we planned to base the gantry’s design on one we had been recommended, the 2xiDraw (<Link to https://www.instructables.com/4xiDraw/), however I ended up modifying the design several times due our design constraint of making the gantry able to lift up to 1 lb. 
+
+
+/home/teddy/Documents/website/images/Capstone/IMG_5472.png
+Caption: First version of the gantry, suffered from weight problems due to the end-effector hanging out without support 
+
+
+/home/teddy/Documents/website/images/Capstone/IMG_5481.png
+Caption: Second version of the gantry, made mostly with aluminum angles. We quickly had to do away with this design as it was not anywhere near stable enough. 
+
+
+/home/teddy/Documents/website/images/Capstone/IMG_5605.png
+Caption: Third and final version of the gantry. Replaced aluminum angles with 2020 extrusions, much more stable/easier to assemble. 
+
+
+To control the gantry’s xy movement, I wired up a CNCshield to some NEMA 17 stepper motors, and controlled the motions with an Arduino. This ended up being trickier than expected, as the standard control libraries prevented us from moving the motors too quickly, so I had to write up some lower-level control code in order to get it to work properly. The z-axis also used a stepper motor, however early on I found that the motor’s torque was not enough to lift the 1lb object limit we set. Thus, I ended up designing and printing a custom geartrain, including a screw gear to convert rotational speed to torque and resist any weight pulling on the end-effector. 
+
+
+/home/teddy/Documents/website/images/Capstone/IMG_5595.png
+Caption: End-effector + z-axis gear system 
+
+
+To pick up objects, I set up the arduino to control a vacuum pump via a relay, which would constantly run through a tube hooked up to the end-effector, a small suction cup. When the suction cup meets the object, the vacuum provides enough adhesion to lift up the object, even for porous surfaces like cardboard. In order to verify when the end-effector met the object, I also hooked up a barometer to the tube, and when the pressure decreased past a certain point, the gantry would know it had contacted the object. 
+
+
+/home/teddy/Documents/website/images/Capstone/diagram.png
+/home/teddy/Documents/website/images/Capstone/IMG_5607.png
+
+
+In order to make sure that the vision system accurately tracked the object, I also had to custom calibrate the camera in order to dewarp the image and also translate the image coordinates to the real-world coordinates of the gantry. 
+
+
+/home/teddy/Documents/website/images/Capstone/IMG_5561.png
+/home/teddy/Documents/website/images/Capstone/IMG_5597.png
+Caption: Working on calibrating the camera calibration
+
+
+The final paper is here: 
+/home/teddy/Documents/website/images/Capstone/Team_E2_Lin_Lu_Miranda_final_report.pdf/
+
+
+/home/teddy/Documents/website/images/Capstone/IMG_5615.png
+Caption: Our group at the final demo
+
+
+https://youtu.be/RNQidSD6OVE
+https://youtu.be/AXB5N9E0O9U
+https://youtu.be/1nLzg_d2_88
+Caption: The gantry lifting various items, including a whole 1lb can of beans!

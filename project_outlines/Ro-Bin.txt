@@ -1,0 +1,17 @@
+﻿This page covers the project work from 18-848 Autonomous Robotics II. For this project, my partner and I created an autonomous trash can robot that wanders/maps the indoors and drives towards those who wave it to receive trash. 
+
+
+The robot uses the roverrobotics 2wd mini base for movement, with an automatic trash mounted to the top that is able to open the lid when a person is nearby. For localization/mapping, the robot uses a RPLidar S2, IMU, and wheel encoders in combination with the ROS2 slam-toolbox. To detect waving persons, we used an intel realsense to capture the RGB-D image, and ran BlazePose on the image to detect whether or not anyone is waving at the robot. We then were able to use the depth information from the realsense to translate the person’s coordinates to world-frame coordinates, and then performed both DWB local planning and A* global path planning. Additionally, we wrote in custom behaviour for when the robot is waiting for a new goal, so that it wanders around its surroundings and maps out obstacles for future reference. 
+
+
+/home/teddy/Documents/website/images/Trash_Robot/IMG_4943.png
+Caption: Flow chart of the robot’s different systems
+
+
+/home/teddy/Documents/website/images/Trash_Robot/state_machine.png
+Caption: Simplified state machine 
+
+
+/home/teddy/Documents/website/images/Trash_Robot/wandering_demo.mp4
+/home/teddy/Documents/website/images/Trash_Robot/IMG_2104.mov
+https://youtu.be/LGyRHn5Xapk

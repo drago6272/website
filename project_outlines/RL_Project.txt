@@ -1,0 +1,13 @@
+﻿Title: Learning Robot Manipulation from Demonstrations using Flow Matching
+This page covers my final project for 16-831: Introduction to Robot Learning. For this project, my group explored offline robot learning from human demonstrations using modern generative models. The main goal was to see whether newer approaches—specifically diffusion policies and flow matching models—could learn robot manipulation behaviors from fixed datasets without any online interaction. We ran our experiments using the RoboMimic benchmark, since it provided some simple tasks that were easily comparable to other models. 
+For my part of the project, I implemented and trained the flow matching policy. This involved adapting the architecture used in diffusion policies, integrating it into the RoboMimic training pipeline, and running the experiments across the full benchmark task set. Luckily, I was able to do all of the training for the flow matching model on my laptop GPU, though it did take around a week. Both models were trained using RoboMimic’s proficient human demonstration datasets with low-dimensional state observations. 
+(The following 5 images should go from the left to the right of the page, all next to each other)
+/home/teddy/Documents/website/images/RL_Project/flow_matching_lift_demo.gif
+/home/teddy/Documents/website/images/RL_Project/flow_matching_can_demo.gif
+/home/teddy/Documents/website/images/RL_Project/flow_matching_square_demo.gif
+/home/teddy/Documents/website/images/RL_Project/flow_matching_transport_demo.gif
+/home/teddy/Documents/website/images/RL_Project/flow_matching_tool_hang_demo.gif
+Caption: My flow matching model performing on the robomimic tasks (from left to right: left, can, square, transport, tool_hang)
+Overall, flow matching actually produced competitive results across most tasks. 
+The paper: 
+/home/teddy/Documents/website/images/RL_Project/RL_16831_Project_Report.pdf

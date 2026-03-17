@@ -1,0 +1,55 @@
+﻿One day, out of nowhere, I decided to learn how to play the accordion (believe it or not, this statement will be funnier at the end of this page). I’d seen on youtube that it was possible to get an accordion for cheap, as there were many people who had obtained an accordion when it was popular 50 or so years ago, and now their children have nothing to do with them. However, after a few days of checking facebook marketplace, I’d realized that because it was common knowledge that accordions were being sold for less than their worth, people were much wiser to the value of the accordions they were selling, meaning that there were hardly any good deals. So when I saw an accordion for $300 (expensive, but a decent price for a working accordion), I seized the opportunity. 
+
+
+As some context, when buying a used accordion, according to the internet it is really important to test it first to make sure there are no problems with it. They tend to be a few decades old at the least, and are extremely complex, so there is a high chance that it will have issues and will not be worth the purchase. However, I was naive and impatient for an accordion by the time I met the seller, so despite testing it and hearing some horse-esque wheezing from some of the keys, I just caved in and took the deal. 
+
+
+I then proceeded to educate myself on one of the most useless skills one could ever learn: accordion repair. It actually turned out to be simple conceptually, however it requires a lot of manual labor. 
+
+
+In brief, accordions work similar to a harmonica: there are blocks filled with metallic reeds, which produce sound when air passes through them. These “reed blocks” are double sided, with a simple valve flap on the back of each reed, so that sound is produced when the bellows are stretched and compressed (so the reed that plays when squeezing is actually a different one than the one that plays when pulling, even though it’s the same note). 
+
+
+After opening up the accordion, it turned out that the problem was not with any of the reeds themselves (which would have meant buying new ones, or in other words buying a new accordion). Instead, the leather valves that prevented air from leaking the wrong way had curled away from the metal, letting air pass through and causing the awful gasping whine. So, after cleaning out the internals with a copious amount of cotton swabs, I began the painstaking process of replacing the valves.  
+
+
+All in all, there are 3 reed compartments, each with 21 reed plates on each side, with each reed plate containing 2 reeds and thus 2 valves, totaling up to 252 valves. 
+/home/teddy/Documents/website/images/Accordion Repair/IMG_4835.HEIC
+
+
+On the right side of the accordion, that is. On the left (bass) side, there’s another 12*2*2*2 = 96 valves, so in total I needed to check 348 valves. (Great floating icebergs, that’s a lot!)
+/home/teddy/Documents/website/images/Accordion Repair/IMG_4839.HEIC
+
+
+
+
+According to the internet, apparently we’ve invented plastic since these things were made, and now these valves typically are made from plastic sheets. So I dished out some money and bought plastic valves, and began replacing every problematic valve. 
+
+
+Remember when I said that there is two reeds per reed plate? Well, since there is one reed plate on each side of the reed blocks, that means every reed plate has a reed+valve on the inside! It turns out that the only way to access this side is to remove it from the block (a process that can mess with the accordions tuning), or alternatively there is a tiny hole on the bottom of the block where one can barely access the valve. In fear of breaking the accordion, I ended up painstakingly pulling out and replacing the valves with tweezers through these tiny holes. The valves had to be placed exactly right or air would leak through, and to top it, I was essentially working blind, as the hole was small and narrow enough that both lighting it and viewing it at the same time was pretty much impossible. 
+
+
+/home/teddy/Documents/website/images/Accordion Repair/IMG_5022.HEIC
+/home/teddy/Documents/website/images/Accordion Repair/IMG_4841.HEIC
+
+
+In order to prevent having to completely dissassemble and reassemble the accordion to test the valve, I took some inspiration from a youtube video and 3d printed a custom tester. This sounds fancy, but it is essentially just a board that fits into the bellows with a hole on the top, allowing a single note to be tested: 
+
+
+/home/teddy/Documents/website/images/Accordion Repair/IMG_5206.HEIC
+/home/teddy/Documents/website/images/Accordion Repair/IMG_5207.HEIC
+
+
+After replacing all of the problematic valves, I reassembled it and… it sounded terrible. As it turns out, for the larger valves (which is all of the ones I replaced, since the larger ones tended to curl away), plastic doesn’t do a good job, as the valve can flap around and cause a secondary “pbbbbth” alongside the intended tone. 
+
+
+Cool. 
+
+
+After some more research, I saw that it was also a common practice to glue on “springs” to the back of the valves, which are just thin strips of metal that resist any non-elastic deformation of the reeds. So I bought said springs online and then proceeded to remove the plastic valves, replace them back with the original leather valves, and then additionally glue the springs to the back. Of course, this also didn’t work; the springs were not stiff enough to hold the leather to the reed plate. As a final attempt, I tried making my own valve springs by printing a 3d printing a single line of filament onto the build plate and cutting it to size. This, to my dismay, worked perfectly. Thus, I didn’t need to buy any of the replacement parts, nor did I actually have to replace the valves themselves. But the accordion works. 
+
+
+/home/teddy/Documents/website/images/Accordion Repair/IMG_5205.MOV
+
+
+So, after all of this very difficult work, I have my accordion, ready for practice. Which I have practiced with for a total of four hours over the past year.

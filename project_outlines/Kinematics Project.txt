@@ -1,0 +1,15 @@
+﻿For my robotic kinematics class, we had a closed-ended final project for which we had to program a robotic arm to pick up/drop markers from the correct places and use these markers to draw 3 curves and 3 straight lines. However, to the dismay of my partners, I decided that we might as well make it so that it can draw anything. 
+
+
+In order to achieve this, I made it such that the code was able to take an svg as input, and then process the points into a path that the arm could follow. 
+
+
+/home/teddy/Documents/website/images/Kinematics Project/IMG_5238.png
+/home/teddy/Documents/website/images/Kinematics Project/IMG_5255.jpg
+
+
+Here is the result!
+
+
+/home/teddy/Documents/website/images/Kinematics Project/IMG_5257.MOV
+/home/teddy/Documents/website/images/Kinematics Project/IMG_5259.png

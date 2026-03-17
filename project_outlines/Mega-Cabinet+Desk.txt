@@ -1,0 +1,59 @@
+﻿When I started my last summer as a college student, I realized this could be the last time I’d spend a significant amount of time living in my parents’ house. I wanted to help make their soon-to-be empty nest a little more comfortable. This page covers the renovation I did for my mom (my dad’s renovation is under the Japanese-Style Office Renovation). 
+
+
+My mom has always been a bit of a tinkerer (the apple doesn’t fall far from the tree, I know). Like me, she is always entangled in a multitude of small projects. Over the years, however, after many different projects, the area where she worked (our house’s sunroom) had gotten a bit cluttered, to the point where there wasn’t much of a surface to work on. To be honest, it drove me a little crazy, as even though it was organized, every type of item had its own unique container that didn’t mesh with the others, resulting in a lot of wasted space. So, I proposed to her that I could build the end-all storage solution: a massive cabinet spanning the large flat wall near the room’s entrance. To my delight, she agreed (which is insane, since this inherently meant eventually re-organizing everything into the new cabinet). 
+
+
+/home/teddy/Documents/website/images/Cabinet/IMG_5685.png
+/home/teddy/Documents/website/images/Cabinet/IMG_5686.png
+Caption: A look at the sunroom, pre-renovation 
+
+
+I wanted the cabinet to fit her needs, so during the design process I tried to make sure to check in and make sure every change was ok (which I might have done to the point of pestering, in retrospect). I landed on a design with large drawers on the bottom for bulk items, smaller drawers on the lower-right for tools and mid-sized items, a cabinet on the left which could have bins attached to the doors for very small items, and shelves to the left ant top for large items/bins that didn’t require frequent access. When I was designing the drawers, I actually had them go up to around 5.5 feet based off of my eyeline, until I realized that I’m almost a half-foot taller than my mom and ditched the upper layer of drawers. 
+
+
+/home/teddy/Documents/website/images/Cabinet/IMG_5671.png
+Caption: Simple CAD design I made when brainstorming 
+
+
+I was a genius and bought wood from home depot. If you’ve ever worked with home depot wood, you know I’m being sarcastic. This came back to bite me throughout the whole build process, as the wood was so warped that it often threw off my measurements and build what could be described as a giant spring held together by nails and screws (I’m exaggerating, but it’s partly true). 
+
+
+/home/teddy/Documents/website/images/Cabinet/homedepot.jpg
+Caption: an actual photo of the ingenious storage and quality of home depot plywood)  
+
+
+Hoo boy, construction was a challenge. In total, I needed to build the 7.5’x8’ frame, along with 4 shelves, 8 smaller drawers, 4 mid-sized draws, 2 large drawers, as well as the cabinet doors. Overall, that was more than 80 different cuts of wood (of varying thickness) that needed to be made and assembled. I actually had to design it to be built in two halves, as it is literally impossible to fit an 2’x8’x’8’ box through any door of the house (or let alone lift it). By the time I had started building, summer had rolled around, and all of my workshop equipment was moved into the garage. Luckily for me, a heat wave decided to come on in just around this time, and from this I have now learned that working while hot is torture. 
+
+
+/home/teddy/Documents/website/images/Cabinet/IMG_5704.png
+Caption: The finished result of all of the cuts. Literally took a whole week of cutting with the circ saw in ~80-90 degree weather. Fun times
+
+
+/home/teddy/Documents/website/images/Cabinet/IMG_5707.png
+Caption: My brother and my dad were kind enough to help with the process. Given that these cabinets were big enough to crush me, probably a good idea. 
+
+
+/home/teddy/Documents/website/images/Cabinet/IMG_5706.png
+Caption: One side of the cabinet after all of the drawer slides and drawer boxes were installed. A lot ended up being a bit off thanks to home depot, so I had to shimmy some 3d-printed spacers into the drawer sides in order for things to move smoothly. 
+
+
+/home/teddy/Documents/website/images/Cabinet/IMG_5712.png
+Caption: The cabinet, now with drawer fronts. I wanted to get the front to be as flat as possible, so I had to carefully hold the front exactly at the correct angle so that it stayed aligned when it screwed in. Again, home depot, gotta love it. 
+
+
+After around 3 months of work, and a coat of paint, it was finished. I was free!
+
+
+/home/teddy/Documents/website/images/Cabinet/IMG_5746.png
+Caption: Thank god, she likes it!
+
+
+/home/teddy/Documents/website/images/Cabinet/IMG_5811.png
+
+
+Hah, I fooled you! There was actually a little more to be done. See, one of the most challenging aspects of working with this room is the large curved wall on the outside. It makes the room very pretty, as it gives a wide view to the woods in the back, however furniture tends to be square, and not only does it not fit along the wall, it also tends to block the window. Thus, we decided that to capture the potential of this wall, a large curved desk could be put against it. After creating the cabinet, this was stupid simple in comparison, so I was able to knock it out in about a day, and not another 3 months. Yay! 
+
+
+/home/teddy/Documents/website/images/Cabinet/IMG_5749.png
+/home/teddy/Documents/website/images/Cabinet/IMG_5814.png

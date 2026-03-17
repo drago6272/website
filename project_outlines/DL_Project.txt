@@ -1,0 +1,7 @@
+﻿This is my final project for the class 18-794: Introduction to Deep Learning and Pattern Recognition for Computer Vision. For this project, my group and I created an on-edge segmentation model that could run on a raspberry pi 4 4GB in order to classify groceries. Despite the limited hardware, we were able to get the model running at around 8 fps with decent mIoU/AP. 
+
+
+Link to video (<link to https://youtu.be/y_53zHH4cBQ) 
+
+
+(Display the paper here /home/teddy/Documents/website/images/DL_Project/Deep_Learning_Computer_Vision_Project.pdf)
