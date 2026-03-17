@@ -19,34 +19,40 @@
             <p class="hero-subtitle">
               Student @ Carnegie Mellon University 
             </p>
-            <div class="hero-actions">
-              <a href="#projects" class="btn primary">Skip to the projects</a>
-              <a href="#contact" class="btn ghost">Say hello</a>
+            <div class="contact-content">
+              <ul
+                class="contact-list"
+                style="display: grid; grid-auto-flow: column; grid-auto-columns: max-content; align-items: start; gap: 1rem 1.6rem; width: 100%; overflow-x: auto;"
+              >
+                <li>
+                  <span class="contact-label">Email</span>
+                  <span class="contact-value">edward.lin276@gmail.com</span>
+                </li>
+                <li>
+                  <span class="contact-label">GitHub</span>
+                  <span class="contact-value">
+                    <a href="https://github.com/drago6272" target="_blank" rel="noopener noreferrer">
+                      @drago6272
+                    </a>
+                  </span>
+                </li>
+                <li>
+                  <span class="contact-label">LinkedIn</span>
+                  <span class="contact-value">
+                    <a
+                      href="https://www.linkedin.com/in/edward-lin-2aa54a221/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      https://www.linkedin.com/in/edward-lin-2aa54a221/
+                    </a>
+                  </span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
-
-      <section id="about" class="section">
-        <div class="container section-inner split">
-          <div>
-            <h2>About me</h2>
-            <p>
-              Even though I've heard min/maxxing is the current meta, I end up spec'ing in a lot of things.  
-            </p>
-          </div>
-          <div class="about-details">
-            <p>
-              This is a collection of projects and rabbit holes I've fallen into. Some are technical, some more artistic. 
-            </p>
-            <p>
-              If anything here is interesting (or broken oops), feel free to
-              reach out!
-            </p>
-          </div>
-        </div>
-      </section>
-
       <section id="projects" class="section">
         <div class="container section-inner">
           <div class="section-header">
@@ -70,10 +76,6 @@
                     Trash can robot that wanders around indoors and moves towards those who wave to it.
                     Uses lidar, IMU, wheel encoders, jetson for hardware, and ROS2 (slam toolbox/nav2) + BlazePose for software. 
                   </p>
-                  <ul class="project-meta">
-                    <li>Tech: Embedded control, sensors, navigation</li>
-                    <li>Status: Built and tested</li>
-                  </ul>
                 </div>
               </a>
             </article>
@@ -93,10 +95,6 @@
                     Just one time I went a little beyond the scope of the final project. 
                     Programmed a franka kinematic arm to draw any SVG path it is given on a whiteboard.
                   </p>
-                  <ul class="project-meta">
-                    <li>Tech: Kinematics, calibration, motion control</li>
-                    <li>Status: Working plotter</li>
-                  </ul>
                 </div>
               </a>
             </article>
@@ -104,7 +102,7 @@
             <article class="project-card">
               <a class="project-card-link" href="projects/trash-sorting-gantry.html">
                 <div class="project-header">
-                  <h4>Trash‑Sorting Gantry (Capstone)</h4>
+                  <h4>Trash‑Sorting Gantry</h4>
                   <span class="tag">Finished</span>
                 </div>
                 <div class="project-image">
@@ -117,10 +115,6 @@
                     into different bins. Combines vision, classification, and motion to
                     sort trash automatically.
                   </p>
-                  <ul class="project-meta">
-                    <li>Tech: Computer vision, ML, mechatronics</li>
-                    <li>Status: Deployed as a capstone demo</li>
-                  </ul>
                 </div>
               </a>
             </article>
@@ -128,7 +122,7 @@
             <article class="project-card">
               <a class="project-card-link" href="projects/reinforcement-learning-project.html">
                 <div class="project-header">
-                  <h4>Reinforcement Learning Project</h4>
+                  <h4>Imitation Learning w/ Flow Matching</h4>
                   <span class="tag">Finished</span>
                 </div>
                 <div class="project-image">
@@ -139,10 +133,6 @@
                   <p class="project-description">
                     
                   </p>
-                  <ul class="project-meta">
-                    <li>Tech: RL, Python, experimentation</li>
-                    <li>Status: Completed coursework project</li>
-                  </ul>
                 </div>
               </a>
             </article>
@@ -163,10 +153,6 @@
                     grocery items. Main focus was on squeezing a useful model into edge
                     hardware limits.
                   </p>
-                  <ul class="project-meta">
-                    <li>Tech: Edge ML, model optimization, Raspberry Pi</li>
-                    <li>Status: Working prototype</li>
-                  </ul>
                 </div>
               </a>
             </article>
@@ -190,10 +176,6 @@
                     guide a marble through obstacles under time pressure, tuned to be just
                     hard enough to be fun during a carnival‑style booth.
                   </p>
-                  <ul class="project-meta">
-                    <li>Focus: Game design, physical build, reliability</li>
-                    <li>Status: Built and run at booth</li>
-                  </ul>
                 </div>
               </a>
             </article>
@@ -213,10 +195,6 @@
                     A video game developed in Unity inspired by the classic offline Chrome dinosaur game.
                     Players can jump in real life to jump obstacles. Chock full of silly. 
                   </p>
-                  <ul class="project-meta">
-                    <li>Tech: Simple game engine, input handling</li>
-                    <li>Status: Built and play‑tested at booth</li>
-                  </ul>
                 </div>
               </a>
             </article>
@@ -237,10 +215,6 @@
                     Players can shoot lightgun or swing chainsaw to fight off sharks attacking the school. 
                     Game is complete with animated sharks that move with motion-tracked footage of the school grounds.
                   </p>
-                  <ul class="project-meta">
-                    <li>Tech: Wiimote input, motion mapping, game design</li>
-                    <li>Status: Built and run as a booth game</li>
-                  </ul>
                 </div>
               </a>
             </article>
@@ -261,10 +235,6 @@
                   <p class="project-description">
                     Turning a novelty singing fish into a working home intercom (the mouth moves with the caller's voice). With custom mechanical design, PCB, software, and even latex casting, it's the most comprehensive personal project to date. 
                   </p>
-                  <ul class="project-meta">
-                    <li>Tech: Microcontroller, audio, hardware hacking</li>
-                    <li>Status: Wiring + audio tests in progress</li>
-                  </ul>
                 </div>
               </a>
             </article>
@@ -285,10 +255,6 @@
                     Base is made with stained/finished wood panels for a sleek look. Light has 8 programmable LEDs that look exactly like the game, 
                     uniformly lit such that it looks exactly like the game. Also has a battery pack for portability and pass-through charging for the wall mounted version. 
                   </p>
-                  <ul class="project-meta">
-                    <li>Tech: LEDs, 3D design, basic electronics</li>
-                    <li>Status: Playing with brightness + diffusion</li>
-                  </ul>
                 </div>
               </a>
             </article>
@@ -309,10 +275,6 @@
                     Raised the floor and added new flooring as well as a tatami mats. Added a new closet with a sliding shoji door. 
                     Installed a tokonoma (alcove) and used joinery (+ some modern hacks) to add sapele wood trim/supports. 
                   </p>
-                  <ul class="project-meta">
-                    <li>Focus: Space planning, woodwork, lighting</li>
-                    <li>Status: Done, now used for reading/working</li>
-                  </ul>
                 </div>
               </a>
             </article>
@@ -333,10 +295,6 @@
                     Complete with custom cabinet doors, drawers, and shelves.
                     Also built a custom desk to wrap around the unique curvature of the room and minimize wasted space.  
                   </p>
-                  <ul class="project-meta">
-                    <li>Focus: Joinery, storage design, measuring twice</li>
-                    <li>Status: Finished and fully loaded</li>
-                  </ul>
                 </div>
               </a>
             </article>
@@ -357,10 +315,6 @@
                     Made with a custom 3D printed shell and then sculpted with Monster Clay.
                     My standards are larger than my artistic ability for this one, which makes it take longer than necessary. 
                   </p>
-                  <ul class="project-meta">
-                    <li>Tech: 3D design/sculpting, painting, plant care</li>
-                    <li>Status: Prototyping pot shape + structure</li>
-                  </ul>
                 </div>
               </a>
             </article>
@@ -380,10 +334,6 @@
                     Repair and restoration work on an accordion—replacing reeds, fixing bellows, or
                     tuning so it plays properly again.
                   </p>
-                  <ul class="project-meta">
-                    <li>Focus: Instrument repair, reeds, bellows</li>
-                    <li>Status: Finished</li>
-                  </ul>
                 </div>
               </a>
             </article>
@@ -403,10 +353,6 @@
                     A wooden tray for rolling dice—handy for tabletop games. Built with simple
                     joinery and a lip to keep dice and cards contained.
                   </p>
-                  <ul class="project-meta">
-                    <li>Focus: Woodworking, small projects</li>
-                    <li>Status: Finished</li>
-                  </ul>
                 </div>
               </a>
             </article>
@@ -414,41 +360,6 @@
         </div>
       </section>
 
-      <section id="contact" class="section section-accent">
-        <div class="container section-inner">
-          <div class="section-header">
-            <h2>Contact</h2>
-            <p>
-              If you want to chat about any of this, ask how something works, or share
-              your own projects, here’s where to find me.
-            </p>
-          </div>
-          <div class="contact-content">
-            <ul class="contact-list">
-              <li>
-                <span class="contact-label">Email</span>
-                <span class="contact-value">edward.lin276@gmail.com</span>
-              </li>
-              <li>
-                <span class="contact-label">GitHub</span>
-                <span class="contact-value">
-                  <a href="https://github.com/drago6272" target="_blank" rel="noopener noreferrer">
-                    @drago6272
-                  </a>
-                </span>
-              </li>
-              <li>
-                <span class="contact-label">LinkedIn</span>
-                <span class="contact-value">
-                  <a href="https://www.linkedin.com/in/edward-lin-2aa54a221/" target="_blank" rel="noopener noreferrer">
-                    https://www.linkedin.com/in/edward-lin-2aa54a221/
-                  </a>
-                </span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
     </main>
 
     <footer class="site-footer">
