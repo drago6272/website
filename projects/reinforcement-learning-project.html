@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Learning Robot Manipulation from Demonstrations using Flow Matching</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <main class="section">
+      <div class="container section-inner">
+        <a href="../index.html#projects" class="back-to-top">← Back to all projects</a>
+
+        <h1>Learning Robot Manipulation from Demonstrations using Flow Matching</h1>
+
+        <p>
+          This page covers my final project for 16-831: Introduction to Robot Learning. For this
+          project, my group explored offline robot learning from human demonstrations using modern
+          generative models. The main goal was to see whether newer approaches—specifically diffusion
+          policies and flow matching models—could learn robot manipulation behaviors from fixed
+          datasets without any online interaction. We ran our experiments using the RoboMimic
+          benchmark, since it provided some simple tasks that were easily comparable to other
+          models.
+        </p>
+
+        <p>
+          For my part of the project, I implemented and trained the flow matching policy. This
+          involved adapting the architecture used in diffusion policies, integrating it into the
+          RoboMimic training pipeline, and running the experiments across the full benchmark task
+          set. Luckily, I was able to do all of the training for the flow matching model on my
+          laptop GPU, though it did take around a week. Both models were trained using RoboMimic’s
+          proficient human demonstration datasets with low-dimensional state observations.
+        </p>
+
+        <figure class="project-figure">
+          <table class="images-row-table" role="presentation">
+            <tr>
+              <td><img src="../images/RL_Project/flow_matching_lift_demo.gif" alt="Flow matching – lift task" /></td>
+              <td><img src="../images/RL_Project/flow_matching_can_demo.gif" alt="Flow matching – can task" /></td>
+              <td><img src="../images/RL_Project/flow_matching_square_demo.gif" alt="Flow matching – square task" /></td>
+              <td><img src="../images/RL_Project/flow_matching_transport_demo.gif" alt="Flow matching – transport task" /></td>
+              <td><img src="../images/RL_Project/flow_matching_tool_hang_demo.gif" alt="Flow matching – tool hang task" /></td>
+            </tr>
+          </table>
+          <figcaption>
+            My flow matching model performing on the RoboMimic tasks (from left to right: lift, can,
+            square, transport, tool_hang).
+          </figcaption>
+        </figure>
+
+        <p>
+          Overall, flow matching actually produced competitive results across most tasks.
+        </p>
+
+        <h2>Report</h2>
+        <p>
+          The paper:
+          <a href="../images/RL_Project/RL_16831_Project_Report.pdf" target="_blank" rel="noopener noreferrer">RL 16-831 Project Report (PDF)</a>.
+        </p>
+        <figure class="project-figure">
+          <div class="pdf-wrapper">
+            <iframe
+              src="../images/RL_Project/RL_16831_Project_Report.pdf"
+              title="RL 16-831 Project Report (PDF)"
+              width="960"
+              height="800"
+            ></iframe>
+          </div>
+          <figcaption>RL 16-831 Project Report (PDF).</figcaption>
+        </figure>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Teddy | Projects & Portfolio</title>
+    <meta
+      name="description"
+      content="A personal portfolio showcasing Teddy's projects, experiments, and spare-time work."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <section class="hero" id="top">
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <h1>Teddy Lin</h1>
+            <p class="hero-subtitle">
+              Student @ Carnegie Mellon University 
+            </p>
+            <div class="hero-actions">
+              <a href="#projects" class="btn primary">Skip to the projects</a>
+              <a href="#contact" class="btn ghost">Say hello</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container section-inner split">
+          <div>
+            <h2>About me</h2>
+            <p>
+              Even though I've heard min/maxxing is the current meta, I end up spec'ing in a lot of things.  
+            </p>
+          </div>
+          <div class="about-details">
+            <p>
+              This is a collection of projects and rabbit holes I've fallen into. Some are technical, some more artistic. 
+            </p>
+            <p>
+              If anything here is interesting (or broken oops), feel free to
+              reach out!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="container section-inner">
+          <div class="section-header">
+            <h1>Projects</h1>
+          </div>
+
+          <h3>School projects</h3>
+          <div class="projects-grid">
+            <article class="project-card">
+              <a class="project-card-link" href="projects/mobile-trash-can-robot.html">
+                <div class="project-header">
+                  <h4>Mobile Trash Can Robot</h4>
+                  <span class="tag">Finished</span>
+                </div>
+                <div class="project-image">
+                  <!-- Replace src with your own image file for this project -->
+                  <img src="images/Trash_Robot/thumbnail.png" alt="Mobile trash can robot project image" />
+                </div>
+                <div class="project-extra">
+                  <p class="project-description">
+                    Trash can robot that wanders around indoors and moves towards those who wave to it.
+                    Uses lidar, IMU, wheel encoders, jetson for hardware, and ROS2 (slam toolbox/nav2) + BlazePose for software. 
+                  </p>
+                  <ul class="project-meta">
+                    <li>Tech: Embedded control, sensors, navigation</li>
+                    <li>Status: Built and tested</li>
+                  </ul>
+                </div>
+              </a>
+            </article>
+
+            <article class="project-card">
+              <a class="project-card-link" href="projects/kinematic-arm-plotter.html">
+                <div class="project-header">
+                  <h4>Kinematic Arm Plotter</h4>
+                  <span class="tag">Finished</span>
+                </div>
+                <div class="project-image">
+                  <!-- Replace src with your own image file for this project -->
+                  <img src="images/Kinematics Project/IMG_5259.png" alt="Kinematic arm plotter project image" />
+                </div>
+                <div class="project-extra">
+                  <p class="project-description">
+                    Just one time I went a little beyond the scope of the final project. 
+                    Programmed a franka kinematic arm to draw any SVG path it is given on a whiteboard.
+                  </p>
+                  <ul class="project-meta">
+                    <li>Tech: Kinematics, calibration, motion control</li>
+                    <li>Status: Working plotter</li>
+                  </ul>
+                </div>
+              </a>
+            </article>
+
+            <article class="project-card">
+              <a class="project-card-link" href="projects/trash-sorting-gantry.html">
+                <div class="project-header">
+                  <h4>Trash‑Sorting Gantry (Capstone)</h4>
+                  <span class="tag">Finished</span>
+                </div>
+                <div class="project-image">
+                  <!-- Replace src with your own image file for this project -->
+                  <img src="images/Capstone/IMG_5592.png" alt="Trash-sorting gantry project image" />
+                </div>
+                <div class="project-extra">
+                  <p class="project-description">
+                    A gantry system that identifies items on a conveyor and drops them
+                    into different bins. Combines vision, classification, and motion to
+                    sort trash automatically.
+                  </p>
+                  <ul class="project-meta">
+                    <li>Tech: Computer vision, ML, mechatronics</li>
+                    <li>Status: Deployed as a capstone demo</li>
+                  </ul>
+                </div>
+              </a>
+            </article>
+
+            <article class="project-card">
+              <a class="project-card-link" href="projects/reinforcement-learning-project.html">
+                <div class="project-header">
+                  <h4>Reinforcement Learning Project</h4>
+                  <span class="tag">Finished</span>
+                </div>
+                <div class="project-image">
+                  <!-- Replace src with your own image file for this project -->
+                  <img src="images/RL_Project/tool_hang_4.png" alt="Reinforcement learning project image" />
+                </div>
+                <div class="project-extra">
+                  <p class="project-description">
+                    
+                  </p>
+                  <ul class="project-meta">
+                    <li>Tech: RL, Python, experimentation</li>
+                    <li>Status: Completed coursework project</li>
+                  </ul>
+                </div>
+              </a>
+            </article>
+
+            <article class="project-card">
+              <a class="project-card-link" href="projects/semantic-segmentation-raspberry-pi.html">
+                <div class="project-header">
+                  <h4>Semantic Segmentation on Raspberry Pi</h4>
+                  <span class="tag">Finished</span>
+                </div>
+                <div class="project-image">
+                  <!-- Replace src with your own image file for this project -->
+                  <img src="images/DL_Project/result.png" alt="Semantic segmentation on Raspberry Pi project image" />
+                </div>
+                <div class="project-extra">
+                  <p class="project-description">
+                    Running a semantic segmentation model on a Raspberry Pi to label each
+                    grocery items. Main focus was on squeezing a useful model into edge
+                    hardware limits.
+                  </p>
+                  <ul class="project-meta">
+                    <li>Tech: Edge ML, model optimization, Raspberry Pi</li>
+                    <li>Status: Working prototype</li>
+                  </ul>
+                </div>
+              </a>
+            </article>
+          </div>
+
+          <h3>Booth games</h3>
+          <div class="projects-grid">
+            <article class="project-card">
+              <a class="project-card-link" href="projects/booth-marble-maze.html">
+                <div class="project-header">
+                  <h4>Booth Construction + Marble Maze</h4>
+                  <span class="tag">Finished</span>
+                </div>
+                <div class="project-image">
+                  <!-- Replace src with your own image file for this project -->
+                  <img src="images/Maze_Game/IMG_3696.JPG" alt="Booth marble maze game image" />
+                </div>
+                <div class="project-extra">
+                  <p class="project-description">
+                    A physical marble maze booth game. Players tilt or control the maze to
+                    guide a marble through obstacles under time pressure, tuned to be just
+                    hard enough to be fun during a carnival‑style booth.
+                  </p>
+                  <ul class="project-meta">
+                    <li>Focus: Game design, physical build, reliability</li>
+                    <li>Status: Built and run at booth</li>
+                  </ul>
+                </div>
+              </a>
+            </article>
+
+            <article class="project-card">
+              <a class="project-card-link" href="projects/booth-dino-game.html">
+                <div class="project-header">
+                  <h4>Parody of Chrome Dino Video Game</h4>
+                  <span class="tag">Finished</span>
+                </div>
+                <div class="project-image">
+                  <!-- Replace src with your own image file for this project -->
+                  <img src="images/Dino%20Game/thumbnail.png" alt="Booth dino game image" />
+                </div>
+                <div class="project-extra">
+                  <p class="project-description">
+                    A video game developed in Unity inspired by the classic offline Chrome dinosaur game.
+                    Players can jump in real life to jump obstacles. Chock full of silly. 
+                  </p>
+                  <ul class="project-meta">
+                    <li>Tech: Simple game engine, input handling</li>
+                    <li>Status: Built and play‑tested at booth</li>
+                  </ul>
+                </div>
+              </a>
+            </article>
+
+            <article class="project-card">
+              <a class="project-card-link" href="projects/booth-sharknado-wiimote.html">
+                <div class="project-header">
+                  <h4>Sharknado Wiimote Game</h4>
+                  <span class="tag">Finished</span>
+                </div>
+                <div class="project-image">
+                  <!-- Replace src with your own image file for this project -->
+                  <img src="images/Shark%20Game/thumbnail2.png" alt="Booth Sharknado Wiimote game image" />
+                </div>
+                <div class="project-extra">
+                  <p class="project-description">
+                    A multiplayer Sharknado‑themed booth game made in Unity controlled with Wiimotes. 
+                    Players can shoot lightgun or swing chainsaw to fight off sharks attacking the school. 
+                    Game is complete with animated sharks that move with motion-tracked footage of the school grounds.
+                  </p>
+                  <ul class="project-meta">
+                    <li>Tech: Wiimote input, motion mapping, game design</li>
+                    <li>Status: Built and run as a booth game</li>
+                  </ul>
+                </div>
+              </a>
+            </article>
+          </div>
+          <h3>Personal projects</h3>
+          <div class="projects-grid">
+            <article class="project-card">
+              <a class="project-card-link" href="projects/big-mouth-billy-bass-intercom.html">
+                <div class="project-header">
+                  <h4>Big Mouth Billy Bass Intercom</h4>
+                  <span class="tag">Ongoing</span>
+                </div>
+                <div class="project-image">
+                  <!-- Replace src with your own image file for this project -->
+                  <img src="images/big-mouth-bass.jpg" alt="Big Mouth Billy Bass intercom project image" />
+                </div>
+                <div class="project-extra">
+                  <p class="project-description">
+                    Turning a novelty singing fish into a working home intercom (the mouth moves with the caller's voice). With custom mechanical design, PCB, software, and even latex casting, it's the most comprehensive personal project to date. 
+                  </p>
+                  <ul class="project-meta">
+                    <li>Tech: Microcontroller, audio, hardware hacking</li>
+                    <li>Status: Wiring + audio tests in progress</li>
+                  </ul>
+                </div>
+              </a>
+            </article>
+
+            <article class="project-card">
+              <a class="project-card-link" href="projects/minecraft-torch-light.html">
+                <div class="project-header">
+                  <h4>Minecraft Torch Light</h4>
+                  <span class="tag">Ongoing</span>
+                </div>
+                <div class="project-image">
+                  <!-- Replace src with your own image file for this project -->
+                  <img src="images/minecraft-torch.jpg" alt="Minecraft torch light project image" />
+                </div>
+                <div class="project-extra">
+                  <p class="project-description">
+                    My honest attemp at making a Minecraft torch in the real world as accurately as possible. 
+                    Base is made with stained/finished wood panels for a sleek look. Light has 8 programmable LEDs that look exactly like the game, 
+                    uniformly lit such that it looks exactly like the game. Also has a battery pack for portability and pass-through charging for the wall mounted version. 
+                  </p>
+                  <ul class="project-meta">
+                    <li>Tech: LEDs, 3D design, basic electronics</li>
+                    <li>Status: Playing with brightness + diffusion</li>
+                  </ul>
+                </div>
+              </a>
+            </article>
+
+            <article class="project-card">
+              <a class="project-card-link" href="projects/japanese-style-room-corner.html">
+                <div class="project-header">
+                  <h4>Japanese‑style Office Renovation</h4>
+                  <span class="tag">Finished</span>
+                </div>
+                <div class="project-image">
+                  <!-- Replace src with your own image file for this project -->
+                  <img src="images/Japanese_Room/IMG_5818.png" alt="Japanese-style room corner project image" />
+                </div>
+                <div class="project-extra">
+                  <p class="project-description">
+                    Converted my Dad's office into one inspired by traditional Japanese room design. 
+                    Raised the floor and added new flooring as well as a tatami mats. Added a new closet with a sliding shoji door. 
+                    Installed a tokonoma (alcove) and used joinery (+ some modern hacks) to add sapele wood trim/supports. 
+                  </p>
+                  <ul class="project-meta">
+                    <li>Focus: Space planning, woodwork, lighting</li>
+                    <li>Status: Done, now used for reading/working</li>
+                  </ul>
+                </div>
+              </a>
+            </article>
+
+            <article class="project-card">
+              <a class="project-card-link" href="projects/mega-cabinet-desk.html">
+                <div class="project-header">
+                  <h4>The Mega‑Cabinet + Desk</h4>
+                  <span class="tag">Finished</span>
+                </div>
+                <div class="project-image">
+                  <!-- Replace src with your own image file for this project -->
+                  <img src="images/Cabinet/IMG_5811.png" alt="Custom mega-cabinet project image" />
+                </div>
+                <div class="project-extra">
+                  <p class="project-description">
+                    A massive custom cabinet build to support my Mom's maker projects. 
+                    Complete with custom cabinet doors, drawers, and shelves.
+                    Also built a custom desk to wrap around the unique curvature of the room and minimize wasted space.  
+                  </p>
+                  <ul class="project-meta">
+                    <li>Focus: Joinery, storage design, measuring twice</li>
+                    <li>Status: Finished and fully loaded</li>
+                  </ul>
+                </div>
+              </a>
+            </article>
+
+            <article class="project-card">
+              <a class="project-card-link" href="projects/torterra-bonsai-pot.html">
+                <div class="project-header">
+                  <h4>Torterra Bonsai Pot</h4>
+                  <span class="tag">Ongoing</span>
+                </div>
+                <div class="project-image">
+                  <!-- Replace src with your own image file for this project -->
+                  <img src="images/Torterra Pot/IMG_0549.png" alt="Torterra bonsai pot project image" />
+                </div>
+                <div class="project-extra">
+                  <p class="project-description">
+                    A bonsai planter inspired by the pokemon Torterra. 
+                    Made with a custom 3D printed shell and then sculpted with Monster Clay.
+                    My standards are larger than my artistic ability for this one, which makes it take longer than necessary. 
+                  </p>
+                  <ul class="project-meta">
+                    <li>Tech: 3D design/sculpting, painting, plant care</li>
+                    <li>Status: Prototyping pot shape + structure</li>
+                  </ul>
+                </div>
+              </a>
+            </article>
+
+            <article class="project-card">
+              <a class="project-card-link" href="projects/accordion-repair.html">
+                <div class="project-header">
+                  <h4>Accordion Repair</h4>
+                  <span class="tag">Finished</span>
+                </div>
+                <div class="project-image">
+                  <!-- Replace src with your own image file for this project -->
+                  <img src="images/accordion_repair/IMG_5207.png" alt="Accordion repair project image" />
+                </div>
+                <div class="project-extra">
+                  <p class="project-description">
+                    Repair and restoration work on an accordion—replacing reeds, fixing bellows, or
+                    tuning so it plays properly again.
+                  </p>
+                  <ul class="project-meta">
+                    <li>Focus: Instrument repair, reeds, bellows</li>
+                    <li>Status: Finished</li>
+                  </ul>
+                </div>
+              </a>
+            </article>
+
+            <article class="project-card">
+              <a class="project-card-link" href="projects/wood-dice-tray.html">
+                <div class="project-header">
+                  <h4>Wood Dice Tray</h4>
+                  <span class="tag">Finished</span>
+                </div>
+                <div class="project-image">
+                  <!-- Replace src with your own image file for this project -->
+                  <img src="images/Dice Tray/IMG_4984.png" alt="Wood dice tray project image" />
+                </div>
+                <div class="project-extra">
+                  <p class="project-description">
+                    A wooden tray for rolling dice—handy for tabletop games. Built with simple
+                    joinery and a lip to keep dice and cards contained.
+                  </p>
+                  <ul class="project-meta">
+                    <li>Focus: Woodworking, small projects</li>
+                    <li>Status: Finished</li>
+                  </ul>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section section-accent">
+        <div class="container section-inner">
+          <div class="section-header">
+            <h2>Contact</h2>
+            <p>
+              If you want to chat about any of this, ask how something works, or share
+              your own projects, here’s where to find me.
+            </p>
+          </div>
+          <div class="contact-content">
+            <ul class="contact-list">
+              <li>
+                <span class="contact-label">Email</span>
+                <span class="contact-value">edward.lin276@gmail.com</span>
+              </li>
+              <li>
+                <span class="contact-label">GitHub</span>
+                <span class="contact-value">
+                  <a href="https://github.com/drago6272" target="_blank" rel="noopener noreferrer">
+                    @drago6272
+                  </a>
+                </span>
+              </li>
+              <li>
+                <span class="contact-label">LinkedIn</span>
+                <span class="contact-value">
+                  <a href="https://www.linkedin.com/in/edward-lin-2aa54a221/" target="_blank" rel="noopener noreferrer">
+                    https://www.linkedin.com/in/edward-lin-2aa54a221/
+                  </a>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>This page is just HTML & CSS. Last opened in <span id="year"></span>.</span>
+        <a href="#top" class="back-to-top">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+

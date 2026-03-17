@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Trash-Sorting Gantry (Capstone)</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <main class="section">
+      <div class="container section-inner">
+        <a href="../index.html#projects" class="back-to-top">← Back to all projects</a>
+
+        <h1>Trash-Sorting Gantry (Capstone)</h1>
+
+        <p>
+          In order to complete the ECE undergraduate degree, CMU students must demonstrate their
+          knowledge through a capstone project. The goal is to create a new product or system that
+          addresses a real-world need, while also showing sufficient technical complexity. For our
+          capstone project, my teammates and I decided to create a machine that would sort recycling
+          from trash going through a conveyor belt using computer vision and a 3-axis gantry.
+        </p>
+
+        <p>
+          Overall, my main role in the project was to create the robotic gantry system and program
+          its movement to ensure it could pick up, move, and drop trash consistently (though I did
+          help a little bit on the computer vision side as well).
+        </p>
+
+        <h2>Gantry design</h2>
+        <p>
+          Originally, we planned to base the gantry’s design on one we had been recommended, the
+          2xiDraw (<a href="https://www.instructables.com/4xiDraw/" target="_blank" rel="noopener noreferrer">link</a>),
+          however I ended up modifying the design several times due to our design constraint of
+          making the gantry able to lift up to 1 lb.
+        </p>
+
+        <figure class="project-figure">
+          <img
+            src="../images/Capstone/IMG_5472.png"
+            alt="First version of the gantry"
+          />
+          <figcaption>
+            First version of the gantry, suffered from weight problems due to the end-effector
+            hanging out without support.
+          </figcaption>
+        </figure>
+
+        <figure class="project-figure">
+          <img
+            src="../images/Capstone/IMG_5481.png"
+            alt="Second version of the gantry"
+          />
+          <figcaption>
+            Second version of the gantry, made mostly with aluminum angles. We quickly had to do
+            away with this design as it was not anywhere near stable enough.
+          </figcaption>
+        </figure>
+
+        <figure class="project-figure">
+          <img
+            src="../images/Capstone/IMG_5605.png"
+            alt="Third and final version of the gantry"
+          />
+          <figcaption>
+            Third and final version of the gantry. Replaced aluminum angles with 2020 extrusions,
+            much more stable/easier to assemble.
+          </figcaption>
+        </figure>
+
+        <h2>Motion and actuation</h2>
+        <p>
+          To control the gantry’s xy movement, I wired up a CNCshield to some NEMA 17 stepper motors,
+          and controlled the motions with an Arduino. This ended up being trickier than expected, as
+          the standard control libraries prevented us from moving the motors too quickly, so I had
+          to write up some lower-level control code in order to get it to work properly. The z-axis
+          also used a stepper motor, however early on I found that the motor’s torque was not enough
+          to lift the 1 lb object limit we set. Thus, I ended up designing and printing a custom
+          geartrain, including a screw gear to convert rotational speed to torque and resist any
+          weight pulling on the end-effector.
+        </p>
+
+        <figure class="project-figure">
+          <img
+            src="../images/Capstone/IMG_5595.png"
+            alt="End-effector and z-axis gear system"
+          />
+          <figcaption>End-effector + z-axis gear system.</figcaption>
+        </figure>
+
+        <h2>Pickup system</h2>
+        <p>
+          To pick up objects, I set up the arduino to control a vacuum pump via a relay, which would
+          constantly run through a tube hooked up to the end-effector, a small suction cup. When
+          the suction cup meets the object, the vacuum provides enough adhesion to lift up the
+          object, even for porous surfaces like cardboard. In order to verify when the end-effector
+          met the object, I also hooked up a barometer to the tube, and when the pressure decreased
+          past a certain point, the gantry would know it had contacted the object.
+        </p>
+
+        <figure class="project-figure">
+          <img src="../images/Capstone/diagram.png" alt="System diagram" />
+          <img src="../images/Capstone/IMG_5607.png" alt="Gantry and vacuum setup" />
+        </figure>
+
+        <h2>Vision and calibration</h2>
+        <p>
+          In order to make sure that the vision system accurately tracked the object, I also had
+          to custom calibrate the camera in order to dewarp the image and also translate the image
+          coordinates to the real-world coordinates of the gantry.
+        </p>
+
+        <figure class="project-figure">
+          <img src="../images/Capstone/IMG_5561.png" alt="Camera calibration" />
+          <img src="../images/Capstone/IMG_5597.png" alt="Calibration setup" />
+          <figcaption>Working on calibrating the camera calibration.</figcaption>
+        </figure>        
+
+        <figure class="project-figure">
+          <img
+            src="../images/Capstone/IMG_5615.png"
+            alt="Group at the final demo"
+          />
+          <figcaption>Our group at the final demo.</figcaption>
+        </figure>
+
+        <figure class="project-figure">
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/RNQidSD6OVE"
+              title="Gantry demo – YouTube"
+              width="960"
+              height="540"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </figure>
+
+        <figure class="project-figure">
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/AXB5N9E0O9U"
+              title="Gantry lifting items – YouTube"
+              width="960"
+              height="540"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </figure>
+
+        <figure class="project-figure">
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/1nLzg_d2_88"
+              title="Gantry lifting 1 lb can – YouTube"
+              width="960"
+              height="540"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <figcaption>The gantry lifting various items, including a whole 1 lb can of beans!</figcaption>
+        </figure>
+        
+        <p>
+          The final paper is here:
+          <a href="../images/Capstone/Team_E2_Lin_Lu_Miranda_final_report.pdf" target="_blank" rel="noopener noreferrer">Team E2 Lin, Lu, Miranda – Final Report (PDF)</a>.
+        </p>
+      </div>
+    </main>
+  </body>
+</html>

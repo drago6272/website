@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Booth Game – Sharknado Wiimote</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <main class="section">
+      <div class="container section-inner">
+        <a href="../index.html#projects" class="back-to-top">← Back to all projects</a>
+
+        <h1>Sharknado Wiimote Booth Game</h1>
+
+        <p>
+          When the next year rolled around, I decided I wanted to really test my limits with the
+          next booth game. Our club had chosen Sharknado as the booth’s theme and, to match this
+          blockbuster franchise, I wanted something cinematic and engaging. So I went in with the
+          rule that I would add every feature that popped into my head, no matter the complexity.
+          As you’ll see, that turned out to be a bit more than I could handle.
+        </p>
+
+        <p>
+          The main idea was a multiplayer game controlled with Wii remotes, where players fight off
+          sharks flying toward them. One player uses a lightgun to point at the screen and shoot,
+          while the other wields a “chainsaw” they can swing around. Using intuitive controls avoids
+          a big learning curve and increases throughput at the booth, since two people can play at
+          once. I also had the genius idea of setting the game on CMU’s campus, totally out of love
+          for the school (and definitely not to pander to the judges, wink).
+        </p>
+
+        <figure class="project-figure">
+          <img src="../images/Shark%20Game/81097.jpg" alt="Initial Sharknado booth game diagram" />
+          <figcaption>Initial diagram of what I was aiming for.</figcaption>
+        </figure>
+
+        <p>
+          The big question: how do I get CMU’s campus into the game? Early on I naively tried to
+          model campus in 3D. That might be fine for someone with Blender experience; I had almost
+          none with non‑parametric modeling. I tried grabbing the model from Google Maps, but it was
+          too low‑quality—especially the textures.
+        </p>
+
+        <p>
+          Then I got the genius idea: if the game is based on a mp4ie with cheap special effects,
+          why not just use real footage of CMU as the background? As long as the footage was motion
+          tracked accurately, I could put anything I wanted into it. So during spring break I went
+          out and filmed a first‑person walk from the Fence to Hamerschlag Hall.
+        </p>
+
+        <figure class="project-figure">
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/V2oiCGG2af4"
+              title="basic tracking tracking test – YouTube"
+              width="960"
+              height="540"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <figcaption>Initial test of motion tracking.</figcaption>
+        </figure>
+
+        <p>
+          Overall, the video processing/editing took about a month, most of it spent motion tracking
+          the camera. I naively recorded at 1080p/30fps because that’s what the projector could
+          display—but I ended up desperately needing that extra information to improve feature
+          tracking, especially during quick turns when the image blurred. I tried several apps and
+          Blender extensions, but in the end I had to track every single point manually.
+        </p>
+
+        <figure class="project-figure">
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/bbh1k9fer4M"
+              title="Tracking Video Final – YouTube"
+              width="960"
+              height="540"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <figcaption>
+            Timelapse of one of the motion‑tracking sessions, about ~6 hours total. By this point I
+            was starting to see those tracking points when I closed my eyes.
+          </figcaption>
+        </figure>
+
+        <figure class="project-figure">
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/utUFLxmqB-w"
+              title="result of tracking work – YouTube"
+              width="960"
+              height="540"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <figcaption>
+            The result of the tracking work. It’s not perfect, so I had to make sure nothing in
+            frame gave it away during big camera turns.
+          </figcaption>
+        </figure>
+
+        <p>
+          Once the motion tracking was done, I had to actually convey that there are sharknados
+          everywhere. Putting the tornadoes right next to the camera would be too chaotic, so I
+          placed them behind CMU’s buildings. That meant I had to mask out the buildings from the
+          sky. Normally you’d chroma‑key the sky color, but it had rained earlier that day and the
+          roofs were reflecting the sky—which is exactly the edge I needed to separate. So I spent
+          another two weeks manually rotoscoping all of the roofs. At this point it was easy to
+          forget I was making a video game and not a full‑blown mp4ie.
+        </p>
+
+        <figure class="project-figure">
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/QPKzUsfITtw"
+              title="demo of masking the scene – YouTube"
+              width="960"
+              height="540"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <figcaption>
+            Demo of masking the scene. Tracking grey on grey is really hard for Blender, so almost
+            all of this was manual.
+          </figcaption>
+        </figure>
+
+        <p>
+          Despite the hurdles, the rest of the video work went smoothly. I quickly animated
+          tornadoes of various widths and used Blender physics to procedurally animate sharks in
+          orbit. After some careful placement, the video was complete.
+        </p>
+
+        <figure class="project-figure">
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/O_cSFb5idVk"
+              title="test render of the tornado + sharks – YouTube"
+              width="960"
+              height="540"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <figcaption>Test render of the tornado + sharks.</figcaption>
+        </figure>
+
+        <figure class="project-figure">
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/XNoeDPus-os"
+              title="video with sharknados added – YouTube"
+              width="960"
+              height="540"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <figcaption>The video with sharknados added.</figcaption>
+        </figure>
+
+        <p>
+          Next up: sharks. With my limited animation skills, I created simple biting/swimming
+          animations from rigged shark models I found o
+        </p>
+
+        <figure class="project-figure">
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/t4ED4sqxIzI"
+              title="first shark animation test – YouTube"
+              width="960"
+              height="540"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <figcaption>First shark animation test.</figcaption>
+        </figure>
+
+        <figure class="project-figure">
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/l9_N93QtGck"
+              title=" – YouTube"
+              width="960"
+              height="540"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <figcaption>The animated sharks, now mp4ing with the background.</figcaption>
+        </figure>
+
+        <figure class="project-figure">
+          <img src="../images/Shark%20Game/sharkpog.png" alt="Shark reaction image" />
+          <figcaption>
+            Having some fun during the animation process. 
+          </figcaption>
+        </figure>
+
+        <p>
+          By the time I got to actual gameplay, I only had a few days left. I frantically spent
+          every spare moment wiring everything up. Thankfully, someone had already made an API for
+          Wii remote → Unity communication, so I could extract motion controls for the chainsaw.
+        </p>
+
+        <p>
+          I wanted it to be very clear that the sharks were being sliced apart, so I wrote code to
+          procedurally bisect the model along the direction of the Wiimote swing, and it worked
+          perfectly. For the lightgun, I used a DolphinBar to convert the Wiimote pointer into mouse
+          input, and created shattered shark models that were swapped in at the moment of impact so
+          the sharks appear to explode into pieces.
+        </p>
+
+        <figure class="project-figure">
+          <img src="../images/Shark%20Game/Shatter_demo.gif" alt="Lightgun explosion effect demo" />
+          <figcaption>Demo of the lightgun explosion effect.</figcaption>
+        </figure>
+
+        <p>
+          To make the game feel more arcade‑like and immersive, I also built gun/chainsaw‑shaped
+          holsters for the Wiimotes. The chainsaw was especially awkward: lots of uniquely-shaped
+          parts with high breakage potential.
+        </p>
+
+        <figure class="project-figure">
+          <img src="../images/Shark%20Game/IMG_5455.png" alt="3D printing the chainsaw shell" />
+          <figcaption>Printing out the chainsaw.</figcaption>
+        </figure>
+
+        <figure class="project-figure">
+          <img src="../images/Shark%20Game/IMG_5469.png" alt="Chainsaw controller 1" />
+          <img src="../images/Shark%20Game/IMG_5470.png" alt="Chainsaw controller 2" />
+          <img src="../images/Shark%20Game/IMG_5478.png" alt="Chainsaw controller 3" />
+          <figcaption>
+            The chainsaw controller. I made a cartridge that holds the Wiimote and slots into the
+            front. After about a day of people playing, the chainsaw shell split perfectly in half.
+          </figcaption>
+        </figure>
+
+        <p>
+          Near the end I realized there wasn’t a good narrative reason for the protagonist to be
+          running to Hamerschlag Hall. Wouldn’t it be easier to just hide in the nearest building?
+          So I decided there must be a sharknado‑destroying weapon inside. Conveniently, CMU Radio
+          Club has its space at the top of Hamerschlag, and after a few emails they agreed to let me
+          film there.
+        </p>
+
+        <figure class="project-figure">
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/FjIpAUC7u5A"
+              title="ending video – YouTube"
+              width="960"
+              height="540"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <figcaption>
+            Me messing with CMU Radio Club’s equipment. When they asked what I wanted to film, I
+            said, “I was hoping to just press a ton of buttons,” which, by some miracle, they
+            agreed to (after telling me which ones were okay).
+          </figcaption>
+        </figure>
+
+        <figure class="project-figure">
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/bwXhrYoNxng"
+              title="view from the top of Hamerschlag – YouTube"
+              width="960"
+              height="540"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <figcaption>The view from the top of Hamerschlag is quite nice!</figcaption>
+        </figure>
+
+        <p>
+          I decided it would be hilarious if the sharknado‑ending weapon were some sort of satellite
+          laser that ends up destroying the entire city, so I made a simple Blender animation for
+          that too.
+        </p>
+
+        <figure class="project-figure">
+          <div class="video-wrapper">
+            <iframe
+              src="https://youtube.com/embed/4S9SlQzbq7c"
+              title="satellite laser animation – YouTube"
+              width="960"
+              height="540"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <figcaption>
+            This, along with the previous video, plays when the game ends. I am hi‑larious.
+          </figcaption>
+        </figure>
+
+        <p>
+          Finally, after installing everything in the booth, it was complete. Here’s some content
+          from Carnival.
+        </p>
+
+        <figure class="project-figure">
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/FbwnePA16Zs"
+              title="booth at carnival – YouTube"
+              width="960"
+              height="540"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </figure>
+
+        <figure class="project-figure">
+          <img src="../images/Shark%20Game/IMG_5542.png" alt="Booth photo 1" />
+          <img src="../images/Shark%20Game/IMG_5541.png" alt="Booth photo 2" />
+          <img src="../images/Shark%20Game/IMG_5540.png" alt="Booth photo 3" />
+          <figcaption>
+            Photos of the booth itself, which I wasn’t able to help with much. Everyone did a great job!
+          </figcaption>
+        </figure>
+
+        <p>
+          And after all of that hard work, did we achieve glory? We got third place within our booth
+          category. Eh, good enough.
+        </p>
+      </div>
+    </main>
+  </body>
+</html>

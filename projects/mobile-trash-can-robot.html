@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mobile Trash Can Robot</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <main class="section">
+      <div class="container section-inner">
+        <a href="../index.html#projects" class="back-to-top">← Back to all projects</a>
+        <h1>Mobile Trash Can Robot</h1>
+
+        <p>
+          This page covers the project work from 18-848 Autonomous Robotics II. For this project, my
+          partner and I created an autonomous trash can robot that wanders/maps the indoors and
+          drives towards those who wave it to receive trash.
+        </p>
+
+        <p>
+          The robot uses a Rover Robotics 2WD mini base for movement, with an automatic trash can
+          mounted on top that can open its lid when a person is nearby. For localization and
+          mapping, the robot uses a RPLidar S2, IMU, and wheel encoders in combination with the ROS2
+          slam-toolbox. To detect waving people, we used an Intel RealSense to capture RGB‑D images
+          and ran BlazePose on the images to detect whether anyone was waving at the robot.
+        </p>
+
+        <p>
+          Using the depth information from the RealSense, we translated the person’s position into
+          world‑frame coordinates, then performed both DWB local planning and A* global path
+          planning to drive the robot over. We also wrote custom behavior for when the robot was
+          waiting for a new goal so that it would wander around and keep mapping its surroundings
+          for future reference.
+        </p>
+
+        <figure class="project-figure">
+          <img src="../images/Trash_Robot/IMG_4943.png" alt="Flow chart of robot systems" />
+          <figcaption>Flow chart of the robot’s different systems.</figcaption>
+        </figure>
+
+        <figure class="project-figure">
+          <img src="../images/Trash_Robot/state_machine.png" alt="Simplified state machine" />
+          <figcaption>Simplified state machine.</figcaption>
+        </figure>
+
+        <figure class="project-figure">
+          <video controls width="100%">
+            <source src="../images/Trash_Robot/wandering_demo.mp4" type="video/mp4" />
+            Your browser doesn’t support the video tag.
+          </video>
+          <figcaption>Demo of the robot wandering and mapping its surroundings.</figcaption>
+        </figure>
+
+        <figure class="project-figure">
+          <video controls width="100%">
+            <source src="../images/Trash_Robot/IMG_2104.mov" type="video/quicktime" />
+            Your browser doesn’t support the video tag.
+          </video>
+          <figcaption>Demo of the robot driving over to a waving person.</figcaption>
+        </figure>
+
+        <figure class="project-figure">
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/LGyRHn5Xapk"
+              title="Autonomous trash can robot – YouTube"
+              width="960"
+              height="540"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </figure>
+      </div>
+    </main>
+  </body>
+</html>
+
